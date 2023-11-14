@@ -891,13 +891,13 @@
 "backup_find_wallet" = "import_success_subtitle";
 "Enable_Cloud_Backup" = "open_cloud_backup";
 "Wallet_imported_successfully" = "import_success_title";
-"INTO_social_accounts_created" = "wallet_login_subtitle";
+"into_social_accounts_created" = "wallet_login_subtitle";
 "Associated_INID" = "guide_item_title_Inid";
 "Please_Associate_INID" = "please_link_inid";
 "participate_invite_functions" = "link_inid_desc";
 "wallet_address_bound_associated" = "link_inid_wran";
 "Unbind_the_old_binding" = "unbing_old";
-"Wallet_Address:" = "wallet_address_colon";
+"Wallet_Address_new" = "wallet_address_colon";
 "Association_Now" = "now_link";
 "Association_Successful" = "link_success";
 "Association_Failed" = "link_failure";

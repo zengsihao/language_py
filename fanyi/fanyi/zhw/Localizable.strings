@@ -747,7 +747,7 @@
 "emailList.prompt.message" = "我們發送一封電子郵件，宣布主要功能。您願意接收此類電子郵件嗎？\n\n（每週最多 1 封電子郵件）";
 "emailList.prompt.subscribeButtonTitle" = "我想收到這樣的郵件";
 "emailList.prompt.email.placeholder" = "電子郵件";
-"wallet.summary.today" = "％@ 今天";
+"wallet_summary_today_new" = "%@ 今天";
 "token.tab.info" = "信息";
 "token.tab.activity" = "活動";
 "token.info.header.performance" = "表現";
@@ -768,7 +768,7 @@
 "sortTokens.param.nameDescending" = "名稱：降序";
 "sortTokens.param.valueDescending" = "值：降序";
 "sortTokens.param.mostUsed" = "最常被使用";
-"sortTokens.sortBy" = "排序方式";
+"sortTokens.sortBy" = "排序方式 %@";
 "switchChainRequest.title" = "開關鏈請求";
 "switchChainRequest.action.enableSwitchReload" = "啟用、切換和重新加載";
 "switchChainRequest.action.switchReload" = "切換和重新加載";
@@ -1377,7 +1377,7 @@
 "blUsering" = "拉黑用戶...";
 "exiting" = "退出...";
 "loadinging" = "網頁加載進度 = %f";
-"huanxinIM" = "關閉 ％@";
+"huanxinIM" = "關閉 %@";
 "updateNicknameing" = "修改暱稱...";
 "updateNicknameFail" = "修改暱稱失敗：%@";
 "yourQQ" = "您的QQ";
@@ -2288,7 +2288,7 @@
 "restore_wallet_unlocking_password" = "後續您可以透過解鎖密碼從雲端恢復錢包";
 "local_backup_successful" = "本地備份成功";
 "Wallet_imported_successfully" = "錢包導入成功";
-"INTO_social_accounts_created" = "正在為您自動建立INTO社交帳戶，請稍後…";
+"into_social_accounts_created" = "正在為您自動建立INTO社交帳戶，請稍後…";
 "Creation_Failed" = "創建失敗";
 "network_abnormal_Retry" = "您的網路可能有異常，請檢查後點選重試";
 "Associated_INID" = "關聯INID";
@@ -2296,7 +2296,7 @@
 "participate_invite_functions" = "關聯INID後,此錢包地址與INID將可參與TOX生態、邀請好友、發紅包、鏈上互動等豐富功能";
 "wallet_address_bound_associated" = "此錢包位址已進行普通綁定，無法關聯INID";
 "Unbind_the_old_binding" = "解除舊綁定";
-"Wallet_Address:" = "錢包地址：";
+"Wallet_Address_new" = "錢包地址：";
 "Association_Now" = "立即關聯";
 "Association_Successful" = "關聯成功";
 "Association_Failed" = "關聯失敗";

@@ -510,7 +510,7 @@
 "emailList.prompt.message" = "我們發送一封電子郵件，宣布主要功能。您願意接收此類電子郵件嗎？\n\n（每週最多 1 封電子郵件）";
 "emailList.prompt.subscribeButtonTitle" = "我想收到這樣的郵件";
 "emailList.prompt.email.placeholder" = "電子郵件";
-"wallet.summary.today" = "％@ 今天";
+"wallet_summary_today_new" = "%@ 今天";
 "token.info.header.performance" = "表現";
 "token.info.header.stats" = "統計數據";
 "token.info.field.stats.week" = "1週";
@@ -528,7 +528,7 @@
 "sortTokens.param.nameDescending" = "名稱：降序";
 "sortTokens.param.valueDescending" = "值：降序";
 "sortTokens.param.mostUsed" = "最常被使用";
-"sortTokens.sortBy" = "排序方式";
+"sortTokens.sortBy" = "排序方式 %@";
 "switchChainRequest.title" = "開關鏈請求";
 "switchChainRequest.action.enableSwitchReload" = "啟用、切換和重新加載";
 "switchChainRequest.action.switchReload" = "切換和重新加載";
@@ -911,7 +911,7 @@
 "blUsering" = "拉黑用戶...";
 "exiting" = "退出...";
 "loadinging" = "網頁加載進度 = %f";
-"huanxinIM" = "關閉 ％@";
+"huanxinIM" = "關閉 %@";
 "updateNicknameing" = "修改暱稱...";
 "updateNicknameFail" = "修改暱稱失敗：%@";
 "deleteContacting" = "刪除好友...";

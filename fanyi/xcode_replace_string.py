@@ -24,41 +24,89 @@ def generate_output_files_diffent(different_output_path):
 def replaceSiwftRswift(path,oldpath):
     oldDic = generate_output_files_diffent(oldpath)
     for filepath, dirnames, filenames in os.walk(path):
+        # print(dirnames)
         for filename in filenames:
             file_data = ""
             realfilePath = os.path.join(filepath, filename)
+            # print(realfilePath)
             if filename[-5:] == 'swift' or filename[-1:] == 'm' :  # 判断文件是否为swift文件
                 isSwift = True
                 if filename[-5:] == 'swift':
                     isSwift = True
                 if filename[-1:] == 'm':
                     isSwift = False
-
+                # print(filename)
+                # if filename == 'AppToolUtils.swift':
+                #     print(filename)
                 # if filename == 'languageces08ViewController.swift':
                     # print("000000000===")
                 with open(realfilePath, 'r') as f:
                     lines = f.readlines()
                     # print("read lines =", lines)
                     for line in lines:
+                        # if filename == 'AppToolUtils.swift':
+                        #     print(line)
                         # print(line)
                         for key_old, key_xml in oldDic.items():
-                            print(key_old+'=='+key_xml)
+                            # print(key_old+'=='+key_xml)
                             # print(key_old + key_xml)
                             # if key_old == 'transaction.gasFee.label.title':
                             #     print(key_xml)
-                            if key_old == 'settings.wallet.rename':
-                                print(key_old)
+                            # if key_old == 'accounts.confirm.delete.message':
+                            #     print(key_xml)
+                            # if key_old == 'emailList.email.invalid':
+                            #     print(key_xml)
+                            # if key_old == 'settings.wallet.rename':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'emailList.prompt.subscribeButtonTitle':
+                            #     print(key_old)
+                            # if key_old == 'upload_seed_phrase_restore_wallet':
+                            #     print(key_old)
+                            # if key_old == 'emailList.prompt.email.placeholder':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'password_blank':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'email.not.configured':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'token.transactionConfirmation.default':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'password_longer_characters':
+                            #     print(key_old)
+
+                            # if key_old == 'Display_weight_composition':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'Private Key':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'Ethereum Address':
+                            #     print(key_old)
+                            #
+                            # if key_old == 'minedtoday':
+                            #     print(key_old)
+                            # if key_old == 'reveivernotbindwallet':
+                            #     print(key_old)
+                            # if key_old == 'expired':
+                            #     print(key_old)
+
                             if "." in key_old:
                                 # 如果包含点号，分割字符串并将首字母大写
-                                # if key_old == "transaction.gasFee.label.title":
-                                    # print("aaaaaaaa====")
-                                # if key_old == 'send.error.emptyClipBoard':
-                                #     print(key_old)
                                 parts = key_old.split(".")
                                 new_key = ''
                                 for x in range(len(parts)):
                                     if x == 0:
-                                        new_key = parts[x]
+                                        ced_first = ''
+                                        for index1 in range(len(parts[x])):
+                                            if index1 == 0:
+                                                ced_first = parts[x][index1].lower()
+                                            else:
+                                                ced_first = ced_first + parts[x][index1]
+                                        new_key += ced_first
                                     else:
                                         ced = ''
                                         for index in range(len(parts[x])):
@@ -68,16 +116,15 @@ def replaceSiwftRswift(path,oldpath):
                                                 ced = ced + parts[x][index]
                                         new_key += ced
                                     # print(parts[x])
-                                # new_key = parts[0] + ''.join(word.capitalize() for word in parts[1:])
                                 # swift 替换
                                 # replaced_swift_output[key] = new_key
-                                if key_xml == 'em_login_password_hint_blank':
-                                    print(key_xml)
+                                # if key_xml == 'em_login_password_hint_blank':
+                                #     print(key_xml)
                                 if isSwift == True:
-                                    x_key_old = 'R.string.localizable.' + new_key
-                                    s_key_xml = 'R.string.localizable.' + key_xml
+                                    x_key_old = 'R.string.localizable.' + new_key + '('
+                                    s_key_xml = 'R.string.localizable.' + key_xml + '('
                                 else:
-                                    x_key_old = 'NSLocalizedString(@"%s" ' % (key_old)
+                                    x_key_old = 'NSLocalizedString(@"%s"' % (key_old)
                                     s_key_xml = 'NSLocalizedString(@"%s"' % (key_xml)
                                 # s_key_old = key_old.replace('.', '_')
                                 # if new_key == 'transactionGasFeeLabelTitle':
@@ -85,11 +132,38 @@ def replaceSiwftRswift(path,oldpath):
                                 if x_key_old in line:
                                     line = line.replace(x_key_old, s_key_xml)
                             else:
-                                if key_xml == 'em_login_password_hint_blank':
-                                    print(key_xml)
+                                # if key_xml == 'em_login_password_hint_blank':
+                                #     print(key_xml)
                                 if isSwift == True:
-                                    x_key_old = 'R.string.localizable.' + key_old
-                                    s_key_xml = 'R.string.localizable.' + key_xml
+                                    if ' ' in key_old:
+                                        kongge_parts = key_old.split(" ")
+                                        first_str = ''
+                                        for x in range(len(kongge_parts)):
+                                            if x == 0:
+                                                for index in range(len(kongge_parts[x])):
+                                                    if index == 0:
+                                                        first_str = kongge_parts[x][index].lower()
+                                                    else:
+                                                        first_str = first_str + kongge_parts[x][index]
+                                            else:
+                                                other = ''
+                                                for index in range(len(kongge_parts[x])):
+                                                    if index == 0:
+                                                        other = kongge_parts[x][index].capitalize()
+                                                    else:
+                                                        other = other + kongge_parts[x][index]
+                                                first_str += other
+                                        x_key_old = 'R.string.localizable.' + first_str + '('
+                                        s_key_xml = 'R.string.localizable.' + key_xml + '('
+                                    else:
+                                        other_str = ''
+                                        for index in range(len(key_old)):
+                                            if index == 0:
+                                                other_str = key_old[index].lower()
+                                            else:
+                                                other_str = other_str + key_old[index]
+                                        x_key_old = 'R.string.localizable.' + other_str + '('
+                                        s_key_xml = 'R.string.localizable.' + key_xml + '('
                                 else:
                                     x_key_old = 'NSLocalizedString(@"%s"' % (key_old)
                                     s_key_xml = 'NSLocalizedString(@"%s"' % (key_xml)
@@ -97,7 +171,6 @@ def replaceSiwftRswift(path,oldpath):
                                 # s_key_xml = 'R.string.localizable.' + key_xml
                                 if x_key_old in line:
                                     line = line.replace(x_key_old, s_key_xml)
-
                         file_data += line
 
                 with open(realfilePath, "w", encoding="utf-8") as fw:
@@ -108,10 +181,11 @@ def main():
     # 被替换的string key-key_xml
     replaced_output_path = "./fanyi/zhw/ReplaceOldLocalizable.strings"
 
-
+    print('3')
     # xcode 项目路径
     # file = '/Users/ahao/Documents/language_tools/languageces/languageces/'
-    file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/AlphaWallet/'
+    # file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/AlphaWallet/'
+    file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/utils/'
 
     replaceSiwftRswift(file, replaced_output_path)
 

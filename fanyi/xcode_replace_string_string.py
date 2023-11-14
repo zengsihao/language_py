@@ -208,7 +208,7 @@ def main():
 
     xml_file = '/Users/ahao/Downloads/xml_android/'
     other_path_languages = {
-        "{}values/strings.xml".format(xml_file) : "{}en.lproj/Localizable.strings".format(file),
+        "{}values/strings.xml".format(xml_file): "{}en.lproj/Localizable.strings".format(file),
         "{}values-fr/strings.xml".format(xml_file): "{}fr.lproj/Localizable.strings".format(file),
         "{}values-ja/strings.xml".format(xml_file): "{}ja.lproj/Localizable.strings".format(file),
         "{}values-ko/strings.xml".format(xml_file): "{}ko.lproj/Localizable.strings".format(file),

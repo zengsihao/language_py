@@ -891,13 +891,13 @@
 "backup_find_wallet" = "為了保護您的資金安全，請務必備份錢包，若發現設備遺失、應用卸載等情況，這是找回錢包的唯一方法。";
 "Enable_Cloud_Backup" = "開啟雲端備份";
 "Wallet_imported_successfully" = "錢包導入成功";
-"INTO_social_accounts_created" = "正在為您自動建立INTO社交帳戶，請稍後…";
+"into_social_accounts_created" = "正在為您自動建立INTO社交帳戶，請稍後…";
 "Associated_INID" = "關聯INID";
 "Please_Associate_INID" = "請關聯INID";
 "participate_invite_functions" = "關聯INID後,此錢包地址與INID將可參與TOX生態、邀請好友、發紅包、鏈上互動等豐富功能";
 "wallet_address_bound_associated" = "此錢包位址已進行普通綁定，無法關聯INID";
 "Unbind_the_old_binding" = "解除舊綁定";
-"Wallet_Address:" = "錢包地址：";
+"Wallet_Address_new" = "錢包地址：";
 "Association_Now" = "立即關聯";
 "Association_Successful" = "關聯成功";
 "Association_Failed" = "關聯失敗";
