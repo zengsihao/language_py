@@ -1099,7 +1099,7 @@
 "lessthanten" = "最多選擇10人";
 "torecharge" = "去充值";
 "txremaining" = "TX剩餘數量：%@";
-"know" = "知道了！";
+"know_exclamation" = "知道了！";
 "transfertofriend" = "轉讓給好友";
 "hastransferd" = "已轉讓";
 "medaltransferrecord" = "勳章轉讓記錄";

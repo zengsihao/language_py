@@ -42,7 +42,13 @@ def parse_xml_to_dict(xml_file_path):
 
 # 生成不同的 Localizable.strings 文件
 def generate_output_files(xml_file_path, string_path, replace_output_path, different_output_path, replace_old_output_path, replace_old_key_value_output_path,different_xml_output_path):
-    xml_data = parse_xml_to_dict(xml_file_path)
+    xml_data_old = parse_xml_to_dict(xml_file_path)
+    xml_data = {}
+    xml_data_old_02 = {}
+    for key_xml_old,value_xml_old in xml_data_old.items():
+        xml_data_old_02[value_xml_old] = key_xml_old
+    for key_xml_old_02, value_xml_old_02 in xml_data_old_02.items():
+        xml_data[value_xml_old_02] = key_xml_old_02
 
     with open(string_path, 'r', encoding='utf-8') as localizable_file:
         lines = localizable_file.readlines()
@@ -82,6 +88,8 @@ def generate_output_files(xml_file_path, string_path, replace_output_path, diffe
                         replaced_key_xml_output[key] = key_xml
                         replaced_key_value_output[key] = value
             else:
+                if value == '知道了':
+                    print(key)
                 different_output[key] = value
 
     for key_xml, value_xml in xml_data.items():

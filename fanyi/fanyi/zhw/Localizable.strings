@@ -1703,7 +1703,7 @@
 "toxbalance" = "TOX餘額：%@";
 "buytoxdesc" = "說明：優先扣除可消費餘額，不足時扣除TOX餘額";
 "sureexchange" = "確認兌換";
-"know" = "知道了！";
+"know_exclamation" = "知道了！";
 "exchangefailed" = "兌換失敗";
 "transfertofriend" = "轉讓給好友";
 "hastransferd" = "已轉讓";

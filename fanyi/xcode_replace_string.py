@@ -38,62 +38,14 @@ def replaceSiwftRswift(path,oldpath):
                 # print(filename)
                 # if filename == 'AppToolUtils.swift':
                 #     print(filename)
-                # if filename == 'languageces08ViewController.swift':
-                    # print("000000000===")
                 with open(realfilePath, 'r') as f:
                     lines = f.readlines()
                     # print("read lines =", lines)
                     for line in lines:
-                        # if filename == 'AppToolUtils.swift':
-                        #     print(line)
                         # print(line)
                         for key_old, key_xml in oldDic.items():
                             # print(key_old+'=='+key_xml)
                             # print(key_old + key_xml)
-                            # if key_old == 'transaction.gasFee.label.title':
-                            #     print(key_xml)
-                            # if key_old == 'accounts.confirm.delete.message':
-                            #     print(key_xml)
-                            # if key_old == 'emailList.email.invalid':
-                            #     print(key_xml)
-                            # if key_old == 'settings.wallet.rename':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'emailList.prompt.subscribeButtonTitle':
-                            #     print(key_old)
-                            # if key_old == 'upload_seed_phrase_restore_wallet':
-                            #     print(key_old)
-                            # if key_old == 'emailList.prompt.email.placeholder':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'password_blank':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'email.not.configured':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'token.transactionConfirmation.default':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'password_longer_characters':
-                            #     print(key_old)
-
-                            # if key_old == 'Display_weight_composition':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'Private Key':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'Ethereum Address':
-                            #     print(key_old)
-                            #
-                            # if key_old == 'minedtoday':
-                            #     print(key_old)
-                            # if key_old == 'reveivernotbindwallet':
-                            #     print(key_old)
-                            # if key_old == 'expired':
-                            #     print(key_old)
-
                             if "." in key_old:
                                 # 如果包含点号，分割字符串并将首字母大写
                                 parts = key_old.split(".")
@@ -184,8 +136,8 @@ def main():
     print('3')
     # xcode 项目路径
     # file = '/Users/ahao/Documents/language_tools/languageces/languageces/'
-    # file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/AlphaWallet/'
-    file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/utils/'
+    file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/AlphaWallet/'
+    # file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/utils/'
 
     replaceSiwftRswift(file, replaced_output_path)
 
