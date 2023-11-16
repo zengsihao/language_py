@@ -25,6 +25,11 @@ def readProject(file_path):
 def readProjectbijiao(file_path_zw,file_path_en):
     zw_data = readProject(file_path_zw)
     en_data = readProject(file_path_en)
+    # arr = []
+    # for value in zw_data.values():
+    #     if value in arr:
+    #         print(value)
+    #     arr.append(value)
     for key_zw,value_zw in zw_data.items():
         if key_zw not in en_data.keys():
             print(key_zw)
@@ -35,7 +40,12 @@ if __name__ == '__main__':
     # xcode 多语言文件
     file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/AlphaWallet/Localization/'
 
+    # 原文件string 去重之后的 新string
+    # file_path_zhw = './fanyi/de/Localizable.strings'
+    file_path_zhw =  file + "zh-Hant.lproj/Localizable.strings"
     file_path_en = file + "en.lproj/Localizable.strings"
-    file_path_zhw = file + "zh-Hant.lproj/Localizable.strings"
+
+    # file_path_en = file + "en.lproj/Localizable.strings"
+    # file_path_zhw = file + "zh-Hant.lproj/Localizable.strings"
 
     readProjectbijiao(file_path_zhw, file_path_en)

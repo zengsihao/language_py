@@ -33,7 +33,7 @@ def generate_output_files_diffent_in(different_xml_path):
         "key3": "value3"
     }
     with open(different_xml_path, 'a', encoding='utf-8') as different_new_file:
-        different_new_file.write(f'追加====\n')
+        # different_new_file.write(f'追加====\n')
         for key, value in key_value_pairs.items():
             different_new_file.write(f'"{key}" = "{value}";\n')
 

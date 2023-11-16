@@ -1,0 +1,264 @@
+"browser.bookmarks.confirm.delete.title" = ": 是否確定要刪除此書籤？";
+"a.help.contact.email.appVersion" = "應用版本：%@";
+"a.help.contact.email.locale" = "當前語言環境：%@";
+"a.claim.token.validating.title" = "正在處理...";
+"accounts.error.accountNotFound" = "未找到帳戶";
+"accounts.error.failedToSignMessage" = "簽署消息失敗";
+"accounts.error.failedToExportPrivateKey" = "導出私鑰失敗";
+"accounts.error.failedToSignEmptyMessage" = "無法簽署空消息";
+"settings.preferences.button.title" = "啟動時顯示通證";
+"confirmSignMessage" = "確認簽署此消息：";
+"historyButton.imageLabel" = "我的歷史記錄";
+"dappBrowser.clearHistory" = "是否清除歷史記錄？";
+"blockchain.XDAI" = "xDAI";
+"TokenScript.verifying" = "正在驗證...";
+"TokenScript.type1.supportedAndSigned" = "已驗證";
+"TokenScript.type2.conflictingFiles" = "TokenScript 文件相衝突";
+"TokenScript.type2.conflictingFiles" = "TokenScript 文件相衝突";
+"TokenScript.type2.oldSchemaVersion" = "老舊的 TokenScript 版本";
+"backup.prompt.backup.remindLater" = "稍後提醒我備份？";
+"token.transactionConfirmation.function.title" = "功能";
+"buyCrypto.title" = "購買加密貨幣";
+"qrCode.addCustomToken.title" = "添加自定義令牌";
+"activity.from" = "從 %@";
+"activity.to" = "到 %@";
+"activity.approve.amount.all" = "全部 %@";
+"activity.send.failed" = "發送失敗 %@";
+"activity.speedup" = "加速";
+"transactionConfiguration.Type.slow.time" = "> 10 分鐘";
+"transactionConfirmation.authorisation.reason" = "授權確認交易";
+"walletConnect.session.connect" = "在 %@ 上連接";
+"walletConnect.failure.walletsNotFound" = "未找到 WalletConnect 錢包";
+"walletConnect.sendRawTransaction.title" = "發送原始交易";
+"walletConnect.connection.events.title" = "事件";
+"send.allFunds" = "所有基金";
+"wallet.rename.enterNameTitle" = "輸入名字";
+"wallets.hideToken.error.AddTokenFailure" = "添加令牌失敗";
+"addCustomChain.error.invalidChainId" = "提供的鏈 ID 無效：%@";
+"addCustomChain.error.noRpcNodeUrl" = "未提供 RPC 節點 URL";
+"switchChain.error.invalidChainId" = "提供的鏈 ID 無效：%@";
+"addrpcServer.networkName.error" = "網絡名稱無效";
+"addrpcServer.chainID.error" = "鏈 ID 無效";
+"editCustomRPC.navigation.title" = "編輯自定義 RPC 網絡";
+"editCustomRPC.chainID.error.duplicate" = "鏈ID已經存在";
+"wallet_summary_today_new" = "%@ 今天";
+"addCustomToken.title" = "添加自定義令牌";
+"switchChainRequest.title" = "開關鏈請求";
+"semifungibles.links" = "鏈接";
+"semifungibles.createdDate" = "已創建";
+"nonfungibles.value.blockchain" = "區塊鏈";
+"url.twitter" = "Twitter";
+"url.facebook" = "Facebook";
+"twitter" = "Twitter";
+"walletConnect.error.connectionTimeout.title" = "再次嘗試 WalletConnect";
+"semifungibles.attribute.transferable" = "可轉讓";
+"semifungibles.attribute.transferFee" = "轉讓費";
+"add.multiple.customRpc.error" = "添加鏈失敗";
+"checkTransactionState.invalidHash" = "交易哈希無效";
+"checkTransactionState.field.server.title" = "服務器";
+"checkTransactionState.title" = "檢查交易哈希";
+"checkTransactionState.complete" = "交易狀態：%@";
+"transactionState.unknown" = "未知";
+"tokenscript.overrides.empty" = "沒有 TokenScript 覆蓋";
+"group.update" = "群組更新";
+"group.adminUpdate" = "管理員更新";
+"group.membersUpdate" = "群成員更新";
+"group.sharedFileUpdate" = "群文件更新";
+"invite" = "邀請參加";
+"serchContact" = "搜索聯繫人";
+"fetchLogFail" = "日誌獲取失敗";
+"begin" = "開始";
+"tokenCheck" = "獲取Token校驗";
+"pwd" = "輸入當前賬號的密碼";
+"allDay" = "全天";
+"deviceList" = "登錄設備列表";
+"msgPrompt" = "消息通知";
+"type" = "選擇類型";
+"aiBroadcastGroup.title" = "的轉播群";
+"applyfail" = "添加失敗";
+"remoteCancl" = "對方已取消";
+"leaveChatroomPrompt" = "%@ 離開聊天室";
+"outwhitelist" = "您已被移出白名單";
+"forwardMsg" = "轉發消息";
+"forwardMsgFail" = "轉發消息失敗";
+"groupDescritption" = "群組簡介";
+"joinGroup" = "加群";
+"joinGroupFail" = "加入群組失敗";
+"sendInviteFail" = "發送申請失敗";
+"removeGroupContactFail" = "刪除群成員失敗";
+"removeGroupContactSucess" = "刪除群成員成功";
+"moveToBLFail" = "移至黑名單失敗";
+"moveToBLSuccess" = "移至黑名單成功";
+"muteFail" = "禁言失敗";
+"muteSuccess" = "禁言成功";
+"unmuteFail" = "解除禁言失敗";
+"unmuteSuccess" = "解除禁言成功";
+"tobeAdminFail" = "升級為管理員失敗";
+"tobeAdminSuccess" = "升級為管理員成功";
+"clearMsgs" = "清空消息";
+"groupBL" = "群黑名單";
+"removeBLFail" = "移出黑名單失敗";
+"removeBLSuccess" = "移出黑名單成功";
+"changeOwnerFail" = "移交群主失敗";
+"changeOwnerSuccess" = "移交群主成功";
+"inputGroupNickname" = "輸入你的群暱稱";
+"editGroupDescription" = "編輯群介紹";
+"updateGroupDescriptionFail" = "更新群介紹失敗";
+"mutedPrompt" = "您在群 %@ 已被禁言";
+"removefromwhitelistPrompt" = "您在群 %@ 被移出進白名單";
+"removefromwhitelistPrompt" = "您在群 %@ 被移出進白名單";
+"createChatroomFail" = "創建聊天室失敗";
+"createChatroomSuccess" = "創建聊天室成功";
+"searchChatroom" = "未搜索到聊天室";
+"removeMemberFail" = "刪除成員失敗";
+"removeMemberSuccess" = "刪除成員成功";
+"transferChatroomFail" = "轉讓聊天室失敗";
+"transferChatroomSuccess" = "轉讓聊天室成功";
+"chatroomBlacklist" = "聊天室黑名單";
+"chatroomMutes" = "聊天室禁言列表";
+"chatroomAdmins" = "聊天室管理員";
+"inputChatroomAnnounment" = "請輸入聊天室公告";
+"chatroomAnnounment" = "聊天室公告";
+"useDefaultConfig" = "還原默認配置";
+"notReachServer" = "無法連接服務器";
+"setSuccess" = "設置成功";
+"agreePrompt" = "請選擇同意《INTO服務條款》與《INTO隱私協議》協議！";
+"servicePrompt" = "《INTO服務條款》";
+"newmsg" = "您有一條新消息";
+"inputAppkey" = "請填入您的appkey";
+"exiting" = "退出...";
+"huanxinIM" = "關閉 %@";
+"inviteContacting" = "發送好友請求...";
+"inputGroupMemCount" = "請輸入群組人數 3-3000";
+"searchingGrouping" = "搜索群組...";
+"removeGroupAdmins" = "刪除管理員 %@";
+"removinging" = "正在刪除...";
+"inputChatroomMembrCounts" = "聊天室人數範圍：3-1000";
+"searingChatrooming" = "搜索聊天室...";
+"removeToBLing" = "移至黑名單...";
+"dealinging" = "正在處理...";
+"loging.." = "正在登錄...";
+"yestodatytime" = "昨天 HH:mm";
+"register.messageCode" = "請輸入您的驗證碼";
+"register.inputPhoneNumber" = "請先輸入手機號";
+"login.title" = "登錄Web3IM";
+"into.tabbar.find.title" = "瀏覽器";
+"into.walletaction.backup" = "備份";
+"did.inauthention" = "認證中...";
+"did.authention.failed" = "認證失敗！";
+"mining.toxamount" = "TOX餘額";
+"mining.welfare" = "🎉新手福利";
+"mining.weightraise" = "權重增加";
+"mining.citynode" = "城市節點競選";
+"mining.socialminingdetail" = "社交挖礦明細";
+"backup.inputpassword" = "輸入雲備份密碼";
+"backup.password" = "雲備份密碼";
+"setting.choosenetwork" = "選擇網絡";
+"chainmessagelengthlimit" = "上鏈消息字節限制 %lu/%lu";
+"goodluckandprosperity" = "恭喜發財";
+"walletfunction" = "錢包功能（敬請期待）";
+"hastransferd" = "已轉讓";
+"transfertime" = "轉讓時間";
+"one" = "一";
+"seven" = "日";
+"opensuccess" = "開啟成功";
+"openfailed" = "開啟失敗";
+"date" = "日";
+"hourshi" = "時";
+"imageloadingfailure" = "圖片加載失敗";
+"imageloadingfailure.retry" = "圖片加載失敗，請點擊重試";
+"intodelete" = "[删除]";
+"tillnow" = "至今";
+"unclaimed" = "未領取";
+"depositedincurrentwallet" = "已存入當前錢包";
+"amountofredpacket" = "紅包金額%@ %@";
+"buytime" = "購買時間：%@";
+"buymadeltox" = "購買價格：%@ TOX";
+"buymadelamount" = "購買數量：%@";
+"download" = "下載";
+"faileddownloadvideo" = "下載視頻失敗";
+"backuplist" = "雲備份清單";
+"facefailed" = "刷臉失敗";
+"walletbindtomain" = "該錢包已綁定主錢包";
+"toxdetail" = "詳情";
+"staytuned" = "敬請期待！";
+"enter.invite.code" = "請輸入邀請碼";
+"enter.address.invite.code" = "請輸入錢包地址或者邀請碼";
+"depositCount_chain" = "数量";
+"depositBalance" = "可用：%@ TOX";
+"transactionsStateUpchaining" = "正在上鏈中…..";
+"send.failed" = "發送失敗";
+"failed.to.import.wallet" = "導入錢包失敗";
+"recalledMessage" = "撤回了一條消息";
+"presaled.count" = "已預售數量";
+"stake.miner" = "節點";
+"red_received" = "%@ 領取了 %@";
+"ease_converstaion_msg" = "自定義消息";
+"coin.balance" = "餘額：%@";
+"price" = "單價";
+"total.payment" = "費用總計：%@";
+"mining_pre_sold" = "已預售：";
+"tox_contract_balance" = "合約餘額：%@";
+"current_progress" = "當前進度：";
+"Seed_Phrase_Import" = "助記詞導入";
+"local_backup_successful" = "本地備份成功";
+"Contract_balance" = "合約TOX餘額";
+"Cloud_Backup" = "雲端備份";
+"Generate_Seed_Phrase" = "生成助記詞";
+"Seed_Phrase_one" = "助記詞#1";
+"Cloud_backup_seed_phrase" = "雲端備份助記詞";
+"New_Password" = "新密碼";
+"enter_unlock_code" = "請輸入解鎖密碼";
+"My_Inviter_Address" = "我的邀請人地址";
+"Binding_successful" = "綁定成功！";
+"Enter_invitation_code" = "輸入邀請碼";
+"Complete_cloud_backup" = "完成雲端備份";
+"Join_community" = "加入一個社群";
+"password_blank" = "密碼不能為空";
+"deposit_submitted_successfully" = "提交成功";
+"share_add_remarks_applation" = "請對您的申請好友添加備註";
+"share_ynchronize" = "同步好友";
+"pending_pay_ment" = "待支付";
+
+
+
+"More" = "更多";
+"browserHistory" = "歷史";
+"myBookmarks" = "我的書籤";
+"New" = "新";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

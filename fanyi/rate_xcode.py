@@ -137,7 +137,9 @@ def replaceSiwftRswift(path,oldpath):
 
 def main():
     # 被替换的string key-key_xml
-    replaced_output_path = "./fanyi/zhw/ReplaceOldLocalizable.strings"
+    # replaced_output_path = "./fanyi/zhw/ReplaceOldLocalizable.strings"
+
+    replaced_output_path = "./fanyi/zhw/RateLocalizable.strings"  # 追加相识度的文件
 
     print('4')
     # xcode 项目路径

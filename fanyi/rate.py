@@ -104,7 +104,7 @@ def get_special_characters_pattern(str):
     return count_special_characters
 
 # 根据 xml 替换 string 其他语言
-def generate_other_language_output_files_diffent(replace_old_output_path ,xml_file_path, string_file_path,file_path_zhw):
+def generate_other_language_output_files_diffent(replace_old_output_path ,xml_file_path, string_file_path):
     xml_data_old = parse_xml_to_dict(xml_file_path)
     xml_data = {}
     xml_data_old_02 = {}
@@ -117,27 +117,12 @@ def generate_other_language_output_files_diffent(replace_old_output_path ,xml_fi
     with open(replace_old_output_path, 'r', encoding='utf-8') as replacelocalizable_file:
         replacestringlines = replacelocalizable_file.readlines()
 
-    with open(file_path_zhw, 'r', encoding='utf-8') as zwlocalizable_file:
-        zwstringlines = zwlocalizable_file.readlines()
 
     with open(string_file_path, 'r', encoding='utf-8') as stringlocalizable_file:
         stringlines = stringlocalizable_file.readlines()
 
     replace_lines = {}
     string_lines = {}
-
-    zw_lines = {}
-
-    for line in zwstringlines:
-        if '=' in line:
-            # key, value = line.strip().split(' = ',1)
-            key, value = line.strip().split(' = ', 1)
-            value = value.lstrip()
-            value = value.rstrip(';\n')
-
-            key = key.strip('"')
-            value = value.strip('"')
-            zw_lines[key] = value
 
     for line in replacestringlines:
         if '=' in line:
@@ -164,79 +149,23 @@ def generate_other_language_output_files_diffent(replace_old_output_path ,xml_fi
 
     replace_other_language = {}
 
-    diffent_other_language = {}
-
-    # 已经替换好的繁体文件
-    for key_string_zw, value_zw in zw_lines.items():
-        # if key_string_zw == 'know':
-        #     print(value_zw) replace_lines key_string -key_xml
-        if key_string_zw in replace_lines.values():
-           temArr = []
-           for key_re,value_re in replace_lines.items():
-               if value_re == key_string_zw and value_re not in temArr:
-                   temArr.append(value_re)
-                   for key_string_other, value_string_other in string_lines.items():
-                       if key_string_other == key_re:
-                           replace_other_language[value_re] = value_string_other
+    for key_string_other, value_string_other in string_lines.items():
+        if key_string_other in replace_lines.keys():
+            key_xml = replace_lines[key_string_other]
+            replace_other_language[key_xml] = value_string_other
         else:
-            for key_string_other_dif,value_string_other_dif in string_lines.items():
-                if key_string_zw == 'know':
-                    print(value_zw)
-                if key_string_zw not in replace_lines.values() and key_string_zw == key_string_other_dif:
-                    diffent_other_language[key_string_zw] = value_string_other_dif
-
-    # for key_string_xcode, value_xcode in string_lines.items():
-    #     for key_string, key_xml in replace_lines.items():
-    #         if key_string == key_string_xcode:
-    #             print(f'"{key_string}" = "{key_xml}";\n')
-    #             replace_other_language_lines[key_xml] = value_xcode
-    #             replace_old_language_lines[key_string] = value_xcode
-    # for key_string,value_string in replace_lines.items():
-    #     for key_xml, value_xml in xml_data.items():
-    #         if key_string == key_xml:
-    #            # 如果占位符是一样的多
-    #            if get_special_characters_pattern(value_xml) == get_special_characters_pattern(value_string):
-    #                replace_other_language_lines[key_xml] = value_xml
-    #            else:
-    #                print('占位符号不一样')
-    #                print(f'"{key_xml}" = "{value_xml}";\n')
-    #                print('占位符号不一样')
-
-    # for key_str, value_str in string_lines.items():
-    #     for key_replace in replace_old_language_lines.keys():
-    #         if key_str != key_replace:
-    #             different_other_language_lines[key_str] = value_str
+            replace_other_language[key_string_other] = value_string_other
 
     # 更新string 里面被替换的文件
     with open(string_file_path, 'w', encoding='utf-8') as xcode_file:
         for key, value in replace_other_language.items():
             xcode_file.write(f'"{key}" = "{value}";\n')
 
-    # 文件写入
-    # 追加进入到已经替换的文件里面后面 追加
-    with open(string_file_path, 'a', encoding='utf-8') as different_new_file:
-        # different_new_file.write(f'"zhuijia" = "--------追加不同的---";\n')
-        for key, value in diffent_other_language.items():
-            different_new_file.write(f'"{key}" = "{value}";\n')
-
 
 def main():
 
     # xcode 多语言文件
     file = '/Users/ahao/Documents/INTO/NewCode/IosInto/alpha-wallet-ios/AlphaWallet/Localization/'
-
-    # file_path_en = file + "en.lproj/Localizable.strings"
-    file_path_zhw = file + "zh-Hant.lproj/Localizable.strings"
-
-
-    replace_output_path = "./fanyi/zhw/ReplaceLocalizable.strings"  # 替换后的文件路径
-
-    replace_old_output_path = "./fanyi/zhw/ReplaceOldLocalizable.strings"  # 被替换的文件路径 key-xml_key
-
-    different_string_path = "./fanyi/zhw/DifferentLocalizable.strings"  # 剩余不同的文件路径
-
-    #  替换繁体
-    generate_output_files_diffent(different_string_path, replace_output_path, replace_old_output_path, file_path_zhw)
 
 
     xml_file = '/Users/ahao/Downloads/xml_android/'
@@ -252,6 +181,7 @@ def main():
         "{}values-vi/strings.xml".format(xml_file),
         "{}values/strings.xml".format(xml_file),
         "{}values/strings.xml".format(xml_file),
+        "{}values-zh-rTW/strings.xml".format(xml_file),
         "{}values/strings.xml".format(xml_file),
     ]
 
@@ -266,6 +196,7 @@ def main():
     "{}vi.lproj/Localizable.strings".format(file),
     "{}de.lproj/Localizable.strings".format(file),
     "{}zh-Hans.lproj/Localizable.strings".format(file),
+    "{}zh-Hant.lproj/Localizable.strings".format(file),
     "{}es.lproj/Localizable.strings".format(file),
     ]
 
@@ -275,7 +206,7 @@ def main():
         key = other_path_language_xml[i]
         value = other_path_language_string[i]
         #  替换其他国家语言
-        generate_other_language_output_files_diffent(replace_old_output_path, key,
-                                                     value, file_path_zhw)
+        generate_other_language_output_files_diffent(rate_replace_output_path, key,
+                                                     value)
 
     print('Done')

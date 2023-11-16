@@ -90,7 +90,8 @@ def generate_output_files(xml_file_path, string_path, replace_output_path, diffe
             else:
                 if value == '知道了':
                     print(key)
-                different_output[key] = value
+                if key not in xml_data.keys():
+                    different_output[key] = value
 
     for key_xml, value_xml in xml_data.items():
         if key_xml not in replaced_key_xml_output.values():

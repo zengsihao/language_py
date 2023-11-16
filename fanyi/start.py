@@ -9,5 +9,5 @@ from xcode_replace_string import main as main4
 
 main1()
 main2()
-main3()
-main4()
+# main3()
+# main4()
